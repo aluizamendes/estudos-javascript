@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo adivinha 2 | Final</title>
+  <style>
+    body {
+      font-family: Inter;
+      font-weight: 500;
+      padding: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Jogo: Adivinhe um número</h1>
+
+  <script>
+
+    function pulaLinha() {
+      document.write('<br><br>');
+    }
+
+    // Adiciona título
+    function titulo(mensagem) {
+      document.write("<h2>" + mensagem + "</h2>");
+    }
+
+    // Adiciona parágrafo
+    function texto(mensagem) {
+      document.write("<p>" + mensagem + "</p");
+      document.write('<br>');
+    }
+
+    /* ================================================================================ */
+
+
+    // Para sortear um número
+    function sortearNumero() {
+      return Math.round(Math.random() * 10);
+    }
+
+    
+    let numeroSorteado = sortearNumero();
+    let tentativas = 3;
+
+
+    for(i = 1; i <= tentativas; i++) {
+
+      let chuteUsuario = parseInt(prompt("Já pensei. Qual você acha que é?"));
+
+
+      if(chuteUsuario <= 10) {
+
+        if(chuteUsuario == numeroSorteado) {
+          titulo("Uau, você acertou!");
+          texto("O número pensado foi " + numeroSorteado + ".");
+          break;
+
+        } else {
+          titulo("Você errou!");
+        }
+      } 
+      
+      else {
+      titulo("Você precisa chutar um número entre 1 e 10.");
+      break;
+      }
+
+    }
+
+    titulo("Fim.");
+    
+
+    
+
+  </script>
+  
+</body>
+</html>

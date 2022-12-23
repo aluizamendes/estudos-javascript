@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intervalo de números</title>
+  <style>
+    body {
+      font-family: Inter;
+      font-weight: 500;
+      padding: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <script>
+
+    function pulaLinha() {
+      document.write('<br><br>');
+    }
+
+    // Adiciona título
+    function titulo(mensagem) {
+      document.write("<h2>" + mensagem + "</h2>");
+    }
+
+    // Adiciona parágrafo
+    function texto(mensagem) {
+      document.write("<p>" + mensagem + "</p");
+      document.write('<br>');
+    }
+
+    /////////////////////////////////////////////////
+
+    let numero1 = 0;
+    let contador1 = 2;
+
+    while(numero1 < 100) {
+      numero1 += contador1;
+      texto(numero1);
+    }
+
+    titulo("Fim.");   
+
+    titulo("----------------------------------------------------------------");
+
+
+    /*
+
+    Roberta quer uma dificuldade um pouco maior em seu programa. 
+    Agora ela precisa imprimir todos os números entre 30 e 40 (inclusive 30 e 40), 
+    porém os números 33 e 37 não devem ser impressos! 
+
+    */
+
+    let contador2 = 30;
+
+    while(contador2 <= 40) {
+
+      if(contador2 == 33 || contador2 == 37) {
+        contador2 += 1;
+      }
+
+      else {
+        texto(contador2);
+        contador2 += 1;
+      }
+      
+    }
+    
+    titulo("Fim.");
+
+
+    titulo("----------------------------------------------------------------");
+
+
+    /*
+
+    Agora é sua vez. Roberta lançou o desafio para você imprimir 
+    em ordem decrescente todos os números entre 20 e 0, incluindo os limites! 
+    No final, escreva a palavra "FIM".
+
+    */
+
+    let contador3 = 20;
+
+    while (contador3 >= 0) {
+
+      // tem que mostrar o número (contador) primeiro para então realizar a operação.
+      texto(contador3); 
+      contador3 -= 1;
+      
+    }
+
+    titulo("Fim.");
+    
+
+  </script>
+  
+</body>
+</html>

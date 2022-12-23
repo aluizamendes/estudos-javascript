@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usando inputs e botões no HTML</title>
+  <style>
+    body {
+      font-family: Inter;
+      font-weight: 500;
+      padding: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Adivinhe o número</h2>
+  <p>Chute um número entre 0 e 10. <br>Você tem <span></span> tentativas máximas para adivinhar.</p>
+
+  <input placeholder="Digite seu chute" />
+  <button>Comparar</button>
+
+  <br><br>
+
+  <h2 class="feedback"></h2>
+
+  <script>
+
+    let input = document.querySelector("input");
+    let button = document.querySelector("button");
+    let txtTentativas = document.querySelector("span");
+    let feedback = document.querySelector(".feedback");
+
+    let maximoTentativas = 3;
+
+    txtTentativas.innerHTML = maximoTentativas;  
+
+    let numero = Math.round(Math.random() * 10);
+
+
+    function verifica() {
+
+      if(input.value == numero) {
+        document.write("Você acertou!");
+      }
+
+      else {
+        maximoTentativas -= 1;
+        alert("Você ainda tem " + maximoTentativas + " tentativas restantes.");
+
+        if(maximoTentativas <= 0) {
+          feedback.innerHTML = "Você atingiu o número máximo de tentativas.";
+          input.disabled = true;
+          button.disabled = true;
+        }
+
+      }
+
+      input.value = " ";
+      input.focus();
+
+
+    }
+    
+
+    button.onclick = verifica;
+    
+    
+
+  </script>
+  
+</body>
+</html>

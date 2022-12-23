@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manipulando arrays - Lista de ingredientes</title>
+  <style>
+    body {
+      font-family: Inter;
+      font-weight: 500;
+      padding: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Receitas do Yan</h1>
+  <p>Os ingrediente adicionados foram: <span class="nome-ingredientes"></span>.</p>
+
+  <script>
+
+    /*
+
+    Yan teve a ideia de criar um programa para criar receitas. 
+    Nele, há uma lista no qual o usuário pode adicionar ingredientes.
+    O usuário não pode adicionar ingredientes repetidos.
+
+    */
+
+
+    // array inicial de ingredientes, está vazio
+    let ingredientes = [];
+
+
+    // perguntar a quantidade total de ingredientes
+    let quantidadeIngredientes = parseInt(prompt("Olá! Informe a quantidade de ingredientes que deseja:"));
+
+    // usar um loop para que o usuário insira os ingredientes para essa quantidade x
+    // se inserir um ingrediente que já tem no array, ignorar a "vez", não adioná-lo, e perguntar novamente
+
+
+
+    // loop para a quantidade dee ingredientes
+    let contador = 1;
+
+    while(contador <= quantidadeIngredientes) {
+
+      let nomeIngrediente = prompt("Informe o ingrediente " + contador + ".");
+      let repete = false;
+
+      // verifica se o nome do ingrediente adicionado já está no array
+      for(i = 0; i < ingredientes.length; i++) {
+
+        if (nomeIngrediente == ingredientes[i]) {
+          alert("Você já colocou esse ingrediente, por favor insira outro.");
+          repete = true;
+          break;
+
+        }        
+      }    
+
+      if(repete == false) {
+        ingredientes.push(nomeIngrediente);
+        contador++;
+
+      }
+    }
+
+    // mostra no html os ingredientes adicionados
+    let resultado = document.querySelector(".nome-ingredientes");
+    resultado.innerHTML = ingredientes;   
+    
+
+  </script>
+  
+</body>
+</html>

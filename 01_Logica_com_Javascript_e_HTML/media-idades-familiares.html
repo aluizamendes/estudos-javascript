@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Média de idade dos familiares</title>
+  <style>
+    body {
+      font-family: Inter;
+      font-weight: 500;
+      padding: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <script>
+
+    function pulaLinha() {
+      document.write('<br><br>');
+    }
+
+    // Adiciona título
+    function titulo(mensagem) {
+      document.write("<h2>" + mensagem + "</h2>");
+    }
+
+    // Adiciona parágrafo
+    function texto(mensagem) {
+      document.write("<p>" + mensagem + "</p");
+      document.write('<br>');
+    }
+
+    /////////////////////////////////////////////////
+
+    let quantidadeDePessoas = parseInt(prompt("Informe a quantidade de pessoas da sua familia"));
+    
+    // perguntar as idades das pessoas
+    // somar os valores e dividir pela quantidade de pessoas
+
+    let totalIdades = 0;
+    
+    for(i = 1; i <= quantidadeDePessoas; i++) {
+
+      let idade = parseInt(prompt("Informe a idade do familiar"));      
+      totalIdades = totalIdades + idade;
+    }
+
+    let mediaIdades = totalIdades / quantidadeDePessoas;
+
+    titulo("A média das idades é igual a " + mediaIdades);
+
+
+  </script>
+  
+</body>
+</html>

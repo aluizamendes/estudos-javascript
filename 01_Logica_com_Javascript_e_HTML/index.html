@@ -1,0 +1,85 @@
+<meta charset="UTF-8">
+
+<script>
+  // funções sempre no topo do código
+
+  function pulaLinha() {
+    document.write('<br><br>');
+  }
+
+  function mostra(mensagem) {
+    document.write(mensagem + '<br>');
+  }
+
+
+
+
+
+  let anoAtual = 2036;
+
+  let idadeFlavio = anoAtual - 1976;
+  let idadeJoaquim = anoAtual - 2000;
+  let idadeBarney = anoAtual - 1986;
+
+
+  mostra('Flávio tem ' + idadeFlavio + ' anos');
+  mostra('Joaquim tem ' + idadeJoaquim + ' anos');
+  mostra('Barney tem ' + idadeBarney + ' anos');
+
+  mostra('calopsitaaaa');
+
+
+  pulaLinha();
+
+  let mediaIdades = (idadeFlavio + idadeJoaquim + idadeBarney) / 3;
+  
+  document.write('A média das idades é ' +  Math.round(mediaIdades)); // arredonda o resultado da operação
+
+
+
+  pulaLinha();
+  pulaLinha();
+
+  let numero = 6;
+  document.write('<h2>' + 'Tabuada do ' + numero + '<br>' + '</h2>');
+
+  document.write(numero + ' x 1 = ' + numero * 1 + '<br>');
+  document.write(numero + ' x 2 = ' + numero * 2 + '<br>');
+  document.write(numero + ' x 3 = ' + numero * 3 + '<br>');
+  document.write(numero + ' x 4 = ' + numero * 4 + '<br>');
+  document.write(numero + ' x 5 = ' + numero * 5 + '<br>');
+  document.write(numero + ' x 6 = ' + numero * 6 + '<br>');
+  document.write(numero + ' x 7 = ' + numero * 7 + '<br>');
+  document.write(numero + ' x 8 = ' + numero * 8 + '<br>');
+  document.write(numero + ' x 9 = ' + numero * 9 + '<br>');
+  document.write(numero + ' x 10 = ' + numero * 10 + '<br>');
+
+  pulaLinha();
+
+  let capacidadeTanqueLitros = 40;
+  let caminhoComGasolina = 480;
+  let caminhoComAlcool = 300;
+
+  let consumoComGasolina = caminhoComGasolina / capacidadeTanqueLitros;
+  let consumoComAlcool = caminhoComAlcool / capacidadeTanqueLitros;
+
+  document.write('Com gasolina você anda ' + consumoComGasolina + ' km por litro.' + '<br>');
+  document.write('Com álcool você anda ' + consumoComAlcool + ' km por litro.');
+
+  // ===================================================================
+
+  pulaLinha();
+
+  let idadeMedia = 28;
+  let ano = 2022;
+
+  let quantidadeGeracoes = (ano - 1500) / 28;
+
+  mostra('Desde 1500 até o ano atual se passaram ' + Math.round(quantidadeGeracoes) + ' gerações.');
+
+  // ===================================================================
+
+
+</script>
+
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Média de gastos do evento</title>
+  <style>
+    body {
+      font-family: Inter;
+      font-weight: 500;
+      padding: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <script>
+
+    function pulaLinha() {
+      document.write('<br><br>');
+    }
+
+    // Adiciona título
+    function titulo(mensagem) {
+      document.write("<h2>" + mensagem + "</h2>");
+    }
+
+    // Adiciona parágrafo
+    function texto(mensagem) {
+      document.write("<p>" + mensagem + "</p");
+      document.write('<br>');
+    }
+
+
+    /* 
+    ======================================================================================
+
+    Karol é organizadora de eventos. Em alguns meses ela é capaz de organizar três eventos 
+    e em outros ela organiza cinco. Ou seja, a quantidade de eventos organizados por Karol 
+    por mês é variável.
+
+    A organizadora de eventos pediu ao seu irmão Kauan, estudante de Ciência da Computação,
+    que criasse um programa no qual ela pode informar o total gasto nos eventos 
+    e disso obter uma média das despesas. Essa média ajudará a prever os gastos 
+    futuros nos próximos meses.
+
+    ====================================================================================== 
+    */
+
+    // informar quantidade total de eventos
+    // perguntar o total gasto nesse numero x de eventos
+    // somar os valores a um total gasto
+    // dividir o total gasto pela quantidade total de eventos
+
+    let totalEventos = parseInt(prompt("Olá! Informe o número total de eventos"));
+    let totalDaDespesa = 0;
+
+    for(i = 1; i <= totalEventos; i++) {
+
+      let gasto = parseInt(prompt("Informe o quanto gastou:"));
+      totalDaDespesa += gasto; 
+      // soma o valor anterior à variável totalDaDespesa toda vez que entra no loop
+    }
+
+    let mediaDeGastos = totalDaDespesa / totalEventos;
+
+    titulo("A média de gastos destes " + totalEventos + " eventos " + "é igual a " + "R$ " + parseInt(mediaDeGastos));    
+
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabuada</title>
+  <style>
+    body {
+      font-family: Inter;
+      font-weight: 500;
+      padding: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <script>
+
+    function pulaLinha() {
+      document.write('<br><br>');
+    }
+
+    // Adiciona título
+    function titulo(mensagem) {
+      document.write("<h2>" + mensagem + "</h2>");
+    }
+
+    // Adiciona parágrafo
+    function texto(mensagem) {
+      document.write("<p>" + mensagem + "</p");
+      document.write('<br>');
+    }
+
+    /////////////////////////////////////////////////
+
+    titulo("Tabuada usando o loop for.");
+     
+
+    let numero = 136;
+
+    //    variável          limitador             incremento
+    for(multiplicador = 1; multiplicador <= 10; multiplicador++) {
+      
+      let resultado = numero * multiplicador;
+
+      texto(numero + " x " + multiplicador + " = " + resultado);
+
+    }
+
+
+
+    /*
+
+    Converta o código abaixo para usar a instrução while. 
+    Lembre-se: o resultado do programa tem que ser o mesmo!
+
+    for( var i = 0; i < 10; i++ ) {
+      alert( "O resultado é " + (2 * i) );
+    }
+
+    */
+   
+    let i = 0;
+
+    while(i < 10) {
+      alert("O resultado é " + (2 * i));
+      i++
+    } 
+
+    
+
+  </script>
+  
+</body>
+</html>

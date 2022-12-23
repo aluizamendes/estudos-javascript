@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manipulando arrays</title>
+  <style>
+    body {
+      font-family: Inter;
+      font-weight: 500;
+      padding: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Adivinhe o segredo</h2>
+  <p>Chute um número entre 0 e 10.</p>
+  <p>Você tem 3 tentativas.</p> <br>
+
+
+  <input placeholder="Digite seu chute" />
+  <button>Comparar</button>
+
+  <script>
+    
+    let input = document.querySelector("input");
+    let button = document.querySelector("button");    
+
+
+    // sorteia um número aleatório
+    function sortearNumero() {
+      return Math.round(Math.random() * 10);
+    }
+
+
+    function adicionarArray(quantidade) {
+
+      let segredos = [];
+      let numero = 1;
+
+
+      while(numero <= quantidade) {
+
+        let numeroAleatorio = sortearNumero();
+        let repete = false;
+
+        if(numeroAleatorio != 0) {
+
+          for(i = 0; i < segredos.length; i++) {
+
+            if(segredos[i] == numeroAleatorio) {
+              repete = true;
+              break;
+            }
+         }
+
+          if(repete == false) {
+
+            segredos.push(numeroAleatorio);
+            numero++;
+          }
+
+        }
+      }
+
+      // segredos.push(numeroAleatorio);
+      // enquanto ´i´ for menor que a ´quantidade´, iremos dar push de um número aleatório no array
+            
+      return segredos;
+    }
+
+
+
+    let segredos = adicionarArray(5);
+
+    console.log(segredos);
+
+
+    function verificaAcerto() {
+
+      let achou = false;
+
+      for(i = 0; i < segredos.length; i++) {
+
+        if(input.value == segredos[i]) {
+          alert("Você acertou!");
+          achou = true;
+          break;
+        }
+      }
+
+      if(achou == false) {
+        alert("Você errou!");
+      }
+      input.value = " ";
+    }
+
+
+    button.onclick = verificaAcerto;
+    
+
+  </script>
+  
+</body>
+</html>

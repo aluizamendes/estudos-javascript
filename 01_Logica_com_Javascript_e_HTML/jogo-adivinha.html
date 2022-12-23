@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo adivinha</title>
+  <style>
+    body {
+      font-family: Inter;
+      font-weight: 500;
+      padding: 24px;
+    }
+  </style>
+</head>
+<body>
+  <script>
+
+    function pulaLinha() {
+      document.write('<br><br>');
+    }
+
+    // Adiciona título
+    function titulo(mensagem) {
+      document.write("<h2>" + mensagem + "</h2>");
+    }
+
+    // Adiciona parágrafo
+    function texto(mensagem) {
+      document.write("<p>" + mensagem + "</p");
+      document.write('<br>');
+    }
+
+
+    /* 
+
+    Faça um programa que gera um número aleatório só entre 1 e 10, e o usuário 
+    tenta chutar esse número. Se acertar, exibir mensagem 'você acertou', se não,
+    'você errou' e informar qual era o número certo.
+
+    */
+                        
+    let numero = Math.round(Math.random() * 10); // Math.random multiplicado por 10 para sortear um número de 1 a 10, e o Math.round para se ser um número inteiro.
+    let chuteUsuario = parseInt(prompt("Olá! Chute um número de 1 a 10."));
+
+    if(chuteUsuario <= 10) {
+
+      if(chuteUsuario == numero) {
+        titulo("Parabéns você acertou!!");
+      } else {
+        titulo("Você errou!");
+        texto("O número pensado era " + numero + ".");
+      }
+    } else {
+      titulo("Você só pode chutar um número de 1 a 10.");
+    }
+
+    
+
+
+  </script>
+  
+</body>
+</html>
