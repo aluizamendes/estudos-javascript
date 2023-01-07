@@ -1,0 +1,44 @@
+body {
+  background-color: rgb(179, 212, 245);
+  font: normal 18px Arial;
+  padding: 16px 0;
+}
+
+header {
+  text-align: center;
+}
+
+section {
+  background-color: white;
+  padding: 16px;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0px 4px 16px #0437541b;
+}
+
+input {
+  padding: 4px 8px;
+}
+
+#res {
+  display: none;
+  margin-top: 30px;
+  width: fit-content;
+  margin-inline: auto;
+  text-align: left;
+  border: #b6bbbd 1px solid;
+  padding: 8px 24px;
+  border-radius: 8px;
+}
+
+#res p {
+  line-height: 12px;
+}
+
+footer {
+  text-align: center;
+  font-size: 14px;
+  color: #3c3c3c;
+  margin-top: 32px;
+}
