@@ -1,0 +1,25 @@
+body {
+  background-color: wheat;
+  font: normal 18px Arial;
+  padding: 16px 0;
+}
+
+header {
+  text-align: center;
+}
+
+section {
+  background-color: white;
+  padding: 16px;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0px 4px 16px #0437541b;
+}
+
+footer {
+  text-align: center;
+  font-size: 14px;
+  color: #3c3c3c;
+  margin-top: 32px;
+}
