@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acerte o alvo</title>
+    <style>
+      body {
+        display: grid;
+        place-items: center;
+      }
+      canvas {
+        border: 1px solid #969ca0;
+        border-radius: 8px;
+      }
+
+      div {
+        box-sizing: border-box;
+        margin-top: 8px;
+        width: 600px;
+        background-color: #fee1e1;
+        border: 1px solid #969ca0;
+        padding: 16px 24px;
+        border-radius: 8px;
+      }
+
+      span {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+        font-size: 24px;
+        font-weight: 600;
+        color: rgb(28, 36, 51);
+      }
+    </style>
+  </head>
+  <body>
+    <canvas height="400" width="600"></canvas>
+    <br />
+    <div>
+      <span>Pontuação: </span><span id="pontos">0</span>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
